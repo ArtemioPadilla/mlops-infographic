@@ -1,0 +1,277 @@
+/**
+ * MLOps Infografía - Design System Variables
+ * Design tokens for consistent visual design
+ */
+
+:root {
+  /* ==================== COLORS ==================== */
+
+  /* Primary Colors */
+  --primary: #0066CC;
+  --primary-dark: #004080;
+  --primary-light: #0077DD;
+  --secondary: #00A3E0;
+  --secondary-light: #00B8F5;
+
+  /* Accent Colors */
+  --accent-green: #00D084;
+  --accent-orange: #FF6B35;
+  --accent-yellow: #FFD23F;
+  --accent-purple: #9D4EDD;
+  --accent-red: #DC3545;
+
+  /* Neutral Colors */
+  --dark: #1A1A2E;
+  --gray-900: #2C3E50;
+  --gray-700: #5A6C7D;
+  --gray-500: #8A9BA8;
+  --gray-300: #C7D0D9;
+  --gray-100: #E1E8ED;
+  --bg-light: #F5F7FA;
+  --bg-white: #FFFFFF;
+
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  --gradient-hero: linear-gradient(135deg, #0066CC 0%, #00A3E0 50%, #00D084 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-yellow) 100%);
+  --gradient-purple: linear-gradient(135deg, var(--primary) 0%, var(--accent-purple) 100%);
+
+  /* ==================== TYPOGRAPHY ==================== */
+
+  /* Font Families */
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-numbers: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', 'Courier', monospace;
+
+  /* Font Sizes */
+  --text-hero: clamp(60px, 8vw, 96px);
+  --text-mega: clamp(48px, 6vw, 72px);
+  --text-xxxl: clamp(40px, 5vw, 64px);
+  --text-xxl: clamp(36px, 4vw, 56px);
+  --text-xl: clamp(28px, 3.5vw, 48px);
+  --text-lg: clamp(24px, 3vw, 36px);
+  --text-md: clamp(18px, 2vw, 24px);
+  --text-base: 18px;
+  --text-sm: 16px;
+  --text-xs: 14px;
+  --text-xxs: 12px;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* ==================== SPACING ==================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ==================== LAYOUT ==================== */
+
+  --container-width: 1200px;
+  --content-width: 1000px;
+  --section-padding: var(--space-20) var(--space-12);
+  --card-padding: var(--space-8);
+  --gutter: var(--space-6);
+
+  /* ==================== BORDERS ==================== */
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+
+  /* ==================== SHADOWS ==================== */
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+  --shadow-colored: 0 10px 30px rgba(0, 102, 204, 0.2);
+  --shadow-glow: 0 0 20px rgba(0, 163, 224, 0.4);
+
+  /* ==================== ANIMATIONS ==================== */
+
+  /* Durations */
+  --duration-instant: 0.1s;
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-medium: 0.4s;
+  --duration-slow: 0.6s;
+  --duration-slower: 0.8s;
+  --duration-slowest: 1s;
+
+  /* Easing Functions */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ==================== Z-INDEX ==================== */
+
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-notification: 800;
+  --z-max: 999;
+}
+
+/* ==================== GLOBAL RESETS ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--gray-900);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--dark);
+}
+
+p {
+  line-height: var(--leading-relaxed);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-colored {
+  box-shadow: var(--shadow-colored);
+}
+
+/* ==================== LOADING OVERLAY ==================== */
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-max);
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  text-align: center;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--gray-100);
+  border-top-color: var(--primary);
+  border-radius: var(--border-radius-full);
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto var(--space-4);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loader p {
+  color: var(--gray-700);
+  font-size: var(--text-sm);
+}

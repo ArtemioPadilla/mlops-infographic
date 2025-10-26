@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "title": "MLOps: Mejores Prácticas",
+    "subtitle": "Proyectos ML Reproducibles y Escalables",
+    "author": "Artemio Padilla",
+    "year": "2025"
+  },
+  "hero": {
+    "stat": {
+      "number": "87",
+      "symbol": "%",
+      "text": "de proyectos ML nunca llegan a producción"
+    }
+  },
+  "metrics": [
+    {
+      "number": "10",
+      "symbol": "x",
+      "label": "Velocidad",
+      "text": "De meses a días en deployment",
+      "icon": "⚡"
+    },
+    {
+      "number": "100",
+      "symbol": "%",
+      "label": "Reproducibilidad",
+      "text": "Experimentos con resultados idénticos",
+      "icon": "🔄"
+    },
+    {
+      "number": "70",
+      "symbol": "%",
+      "prefix": "-",
+      "label": "Menos Bugs",
+      "text": "Reducción en producción con CI/CD",
+      "icon": "✓"
+    }
+  ],
+  "pipeline": [
+    {"stage": "1. Ingestión", "tools": ["DVC"], "icon": "📥"},
+    {"stage": "2. Procesamiento", "tools": ["Pandas"], "icon": "⚙️"},
+    {"stage": "3. Entrenamiento", "tools": ["MLFlow"], "icon": "🎯"},
+    {"stage": "4. Evaluación", "tools": ["Metrics"], "icon": "📊"},
+    {"stage": "5. Registry", "tools": ["MLFlow"], "icon": "🗃️"},
+    {"stage": "6. Deployment", "tools": ["Docker"], "icon": "🚀"},
+    {"stage": "7. Monitoreo", "tools": ["Grafana"], "icon": "👁️"}
+  ],
+  "concepts": [
+    {
+      "title": "OOP en ML",
+      "keywords": ["Encapsulación", "Abstracción"],
+      "benefit": "+80% mantenibilidad",
+      "icon": "💻"
+    },
+    {
+      "title": "Estructura de Proyecto",
+      "keywords": ["Cookiecutter", "Separación concerns"],
+      "benefit": "+90% reproducibilidad",
+      "icon": "📁"
+    },
+    {
+      "title": "Versionamiento Integral",
+      "keywords": ["Git", "DVC", "MLFlow Registry"],
+      "benefit": "100% trazabilidad",
+      "icon": "🔀"
+    },
+    {
+      "title": "Reproducibilidad",
+      "keywords": ["Seeds fijas", "Docker", "Pipelines"],
+      "benefit": "100% confianza",
+      "icon": "🔄"
+    }
+  ],
+  "roles": [
+    {
+      "role": "Data Scientist",
+      "icon": "🔬",
+      "tools": ["Jupyter", "Pandas", "Scikit-learn"]
+    },
+    {
+      "role": "Data Engineer",
+      "icon": "🗄️",
+      "tools": ["Spark", "Airflow", "SQL"]
+    },
+    {
+      "role": "ML Engineer",
+      "icon": "⚙️",
+      "tools": ["Python", "Docker", "FastAPI"]
+    },
+    {
+      "role": "DevOps Engineer",
+      "icon": "☁️",
+      "tools": ["Kubernetes", "IaC", "CI/CD"]
+    },
+    {
+      "role": "MLOps Engineer",
+      "icon": "🔧",
+      "tools": ["Docker", "Airflow", "MLFlow"]
+    }
+  ],
+  "stack": [
+    {"name": "Git", "category": "Versionamiento"},
+    {"name": "DVC", "category": "Datos"},
+    {"name": "MLFlow", "category": "Tracking"},
+    {"name": "Docker", "category": "Deployment"},
+    {"name": "Kubernetes", "category": "Orquestación"},
+    {"name": "Airflow", "category": "Pipelines"},
+    {"name": "FastAPI", "category": "APIs"},
+    {"name": "Pandas", "category": "Procesamiento"},
+    {"name": "Grafana", "category": "Monitoreo"}
+  ],
+  "mlflow": {
+    "modules": [
+      {"name": "Tracking", "desc": "Experimentos y métricas", "icon": "📊"},
+      {"name": "Models", "desc": "Empaquetado modelos", "icon": "📦"},
+      {"name": "Registry", "desc": "Versionamiento", "icon": "🗃️"},
+      {"name": "Projects", "desc": "Reproducibilidad", "icon": "📁"}
+    ]
+  },
+  "references": [
+    {
+      "id": 1,
+      "apa": "Lauchande, N. (2021). Machine Learning Engineering with MLFlow. O'Reilly Media."
+    },
+    {
+      "id": 2,
+      "apa": "Huyen, C. (2022). Designing Machine Learning Systems: An Iterative Process for Production-Ready Applications. O'Reilly Media."
+    },
+    {
+      "id": 3,
+      "apa": "Treveil, M., Omont, N., Stenac, C., et al. (2020). Introducing MLOps: How to Scale Machine Learning in the Enterprise. O'Reilly Media."
+    },
+    {
+      "id": 4,
+      "apa": "MLflow Project. (2025). MLflow Documentation. https://mlflow.org/docs/latest/"
+    }
+  ],
+  "footer": {
+    "author": "Artemio Padilla",
+    "note": "Creado con ayuda de Inteligencia Artificial",
+    "year": "2025"
+  }
+}

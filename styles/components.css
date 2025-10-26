@@ -1,0 +1,309 @@
+/**
+ * MLOps Infograf\u00eda - Components CSS (Web View)
+ * Compact component styles
+ */
+
+/* ==================== Metric Mini ==================== */
+
+.metric-mini {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+  border-left: 4px solid var(--primary);
+  padding: var(--space-4);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  border-radius: var(--border-radius-sm);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.metric-mini:hover {
+  transform: translateX(4px);
+}
+
+.metric-icon-mini {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.metric-content-mini {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-number-line {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.metric-number-mini {
+  font-size: var(--text-xxl);
+  font-weight: var(--weight-extrabold);
+  font-family: var(--font-numbers);
+  color: var(--primary);
+  line-height: 1;
+}
+
+.metric-symbol-mini {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--secondary);
+}
+
+.metric-label-mini {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--dark);
+  margin-bottom: var(--space-1);
+}
+
+.metric-text-mini {
+  font-size: var(--text-sm);
+  color: var(--gray-700);
+  line-height: var(--leading-snug);
+}
+
+/* ==================== Role Mini (Horizontal Layout) ==================== */
+
+.role-mini {
+  background: var(--bg-white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.role-mini:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.role-icon-mini {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.role-content-mini {
+  width: 100%;
+}
+
+.role-content-mini h4 {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--dark);
+  margin: 0 0 var(--space-1) 0;
+  line-height: var(--leading-tight);
+}
+
+.role-tools-mini {
+  font-size: var(--text-xs);
+  color: var(--gray-700);
+  line-height: var(--leading-snug);
+}
+
+/* ==================== Pipeline Step ==================== */
+
+.pipeline-step {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--bg-white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--border-radius-md);
+  position: relative;
+  transition: transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.pipeline-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.pipeline-step::after {
+  content: '→';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  z-index: 1;
+}
+
+.pipeline-step:last-child::after {
+  display: none;
+}
+
+.pipeline-icon {
+  font-size: 32px;
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.pipeline-stage {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--dark);
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-tight);
+}
+
+.pipeline-tools {
+  font-size: var(--text-xs);
+  color: var(--gray-700);
+  background: var(--bg-light);
+  padding: var(--space-2);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ==================== Concept Mini ==================== */
+
+.concept-mini {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-4);
+  transition: transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.concept-mini:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.concept-header-mini {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.concept-icon-mini {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.concept-title-mini {
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  color: var(--dark);
+  line-height: var(--leading-tight);
+}
+
+.concept-keywords-mini {
+  font-size: var(--text-xs);
+  color: var(--gray-700);
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-relaxed);
+}
+
+.concept-benefit-mini {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--secondary);
+  background: rgba(0, 163, 224, 0.1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--border-radius-full);
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+/* ==================== Stack Item ==================== */
+
+.stack-item {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--dark);
+  background: var(--bg-light);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+  border: 1px solid var(--gray-100);
+  transition: transform var(--duration-fast) var(--ease-out),
+              background var(--duration-fast) var(--ease-out);
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.stack-item:hover {
+  transform: scale(1.05);
+  background: var(--bg-white);
+  border-color: var(--primary);
+}
+
+/* ==================== MLFlow Module Mini ==================== */
+
+.mlflow-module-mini {
+  background: var(--bg-white);
+  padding: var(--space-4);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(0, 163, 224, 0.2);
+  transition: transform var(--duration-fast) var(--ease-out);
+  overflow: hidden;
+}
+
+.mlflow-module-mini:hover {
+  transform: translateY(-2px);
+}
+
+.mlflow-module-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.mlflow-module-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.mlflow-module-name {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mlflow-module-desc {
+  font-size: var(--text-xs);
+  color: var(--gray-700);
+  line-height: var(--leading-snug);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==================== Reference Item ==================== */
+
+.reference-item {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--leading-relaxed);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.reference-number {
+  font-weight: var(--weight-bold);
+  color: var(--accent-yellow);
+  flex-shrink: 0;
+}
+
+.reference-apa {
+  color: rgba(255, 255, 255, 0.85);
+}

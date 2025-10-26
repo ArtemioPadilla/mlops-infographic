@@ -1,0 +1,592 @@
+/**
+ * MLOps Infografía - Print Styles (1 PÁGINA ÚNICA)
+ * Optimized for single A4 landscape page
+ * Ultra-compact layout with 7pt font
+ */
+
+@media print {
+  /* ==================== Page Setup ==================== */
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+
+  /* ==================== General Reset ==================== */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html, body {
+    width: 297mm;
+    height: 210mm;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    font-size: 7pt;
+    line-height: 1.2;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+
+  /* Hide elements */
+  .loading-overlay,
+  noscript {
+    display: none !important;
+  }
+
+  /* ==================== Container ==================== */
+  .infographic-single-page {
+    width: 277mm;
+    height: 190mm;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 32mm 24mm 7mm 72mm 24mm;
+    gap: 0;
+    overflow: hidden !important;
+  }
+
+  /* ==================== HERO BANNER (32mm) ==================== */
+  .hero-banner {
+    grid-row: 1;
+    height: 32mm;
+    background: linear-gradient(135deg, #0066CC 0%, #00A3E0 100%) !important;
+    padding: 3mm 6mm !important;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10mm;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 18pt;
+    font-weight: 900;
+    color: white !important;
+    margin: 0 0 2mm 0;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 9pt;
+    color: rgba(255, 255, 255, 0.95) !important;
+    margin: 0;
+  }
+
+  .hero-stat-main {
+    text-align: right;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 3mm 6mm;
+    border-radius: 4mm;
+    border: 1pt solid rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-number {
+    font-size: 36pt;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    color: white !important;
+    line-height: 1;
+    display: inline-block;
+  }
+
+  .hero-symbol {
+    font-size: 28pt;
+    font-weight: 900;
+    color: #FFD23F !important;
+    margin-left: 1mm;
+  }
+
+  .hero-text {
+    font-size: 8pt;
+    color: white !important;
+    margin: 1mm 0 0 0;
+    line-height: 1.2;
+  }
+
+  /* ==================== PIPELINE ROW (24mm) ==================== */
+  .pipeline-row {
+    grid-row: 2;
+    height: 24mm;
+    background: white !important;
+    padding: 1.5mm 6mm;
+    border-bottom: 0.5mm solid #E1E8ED;
+    overflow: hidden !important;
+  }
+
+  .pipeline-heading {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #0066CC !important;
+    margin: 0 0 1.5mm 0;
+    padding-bottom: 0.75mm;
+    border-bottom: 0.5pt solid #0066CC;
+    line-height: 1.1;
+  }
+
+  /* ==================== ROLES ROW (7mm) ==================== */
+  .roles-row {
+    grid-row: 3;
+    height: 7mm;
+    background: white !important;
+    padding: 0.75mm 6mm;
+    border-bottom: 0.5mm solid #E1E8ED;
+    overflow: hidden !important;
+  }
+
+  .roles-heading {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: #0066CC !important;
+    margin: 0 0 0.75mm 0;
+    padding-bottom: 0.5mm;
+    border-bottom: 0.5pt solid #0066CC;
+    line-height: 1.1;
+  }
+
+  .roles-horizontal {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1mm;
+  }
+
+  /* ==================== MAIN COLUMNS (72mm) ==================== */
+  .main-columns {
+    grid-row: 4;
+    height: 72mm;
+    display: grid;
+    grid-template-columns: 92mm 92mm 92mm;
+    gap: 0.5mm;
+    padding: 0;
+    background: #F5F7FA !important;
+    overflow: hidden !important;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+    padding: 1.5mm;
+    background: white !important;
+    overflow: hidden !important;
+  }
+
+  .column-1 {
+    border-right: 0.5mm solid #E1E8ED;
+  }
+
+  .column-2 {
+    border-right: 0.5mm solid #E1E8ED;
+    background: #FAFBFC !important;
+  }
+
+  /* ==================== Section Compact ==================== */
+  .section-compact {
+    margin-bottom: 0.75mm;
+    overflow: hidden !important;
+    max-height: 100%;
+  }
+
+  .section-heading {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #0066CC !important;
+    margin: 0 0 1.25mm 0;
+    padding-bottom: 0.75mm;
+    border-bottom: 0.5pt solid #0066CC;
+    line-height: 1.1;
+  }
+
+  /* ==================== METRICS (Column 1) ==================== */
+  .metrics-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 1mm;
+  }
+
+  .metric-mini {
+    background: linear-gradient(135deg, #F5F7FA 0%, white 100%);
+    border-left: 2mm solid #0066CC;
+    padding: 0.75mm;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75mm;
+    align-items: center;
+  }
+
+  .metric-icon-mini {
+    font-size: 16pt;
+    line-height: 1;
+  }
+
+  .metric-content-mini {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .metric-number-line {
+    display: flex;
+    align-items: baseline;
+    gap: 1mm;
+    margin-bottom: 0.75mm;
+  }
+
+  .metric-number-mini {
+    font-size: 16pt;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    color: #0066CC !important;
+    line-height: 1;
+  }
+
+  .metric-symbol-mini {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #00A3E0 !important;
+  }
+
+  .metric-label-mini {
+    font-size: 8pt;
+    font-weight: 600;
+    color: #2C3E50 !important;
+    margin-bottom: 0.5mm;
+  }
+
+  .metric-text-mini {
+    font-size: 6.5pt;
+    color: #5A6C7D !important;
+    line-height: 1.2;
+  }
+
+  /* ==================== ROLE COMPONENTS (Used in roles-horizontal) ==================== */
+
+  .role-mini {
+    background: white;
+    border: 0.5pt solid #E1E8ED;
+    border-radius: 1mm;
+    padding: 0.5mm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .role-icon-mini {
+    font-size: 12pt;
+    line-height: 1;
+    margin-bottom: 0.5mm;
+    display: block;
+  }
+
+  .role-content-mini {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .role-content-mini h4 {
+    font-size: 5.5pt;
+    font-weight: 700;
+    color: #2C3E50 !important;
+    margin: 0 0 0.5mm 0;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .role-tools-mini {
+    font-size: 4.5pt;
+    color: #5A6C7D !important;
+    line-height: 1.1;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  /* ==================== PIPELINE (Full Width) ==================== */
+  .pipeline-horizontal {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.75mm;
+  }
+
+  .pipeline-step {
+    text-align: center;
+    padding: 1mm 0.5mm;
+    background: white;
+    border: 0.5pt solid #E1E8ED;
+    border-radius: 1.5mm;
+    position: relative;
+  }
+
+  .pipeline-step::after {
+    content: '→';
+    position: absolute;
+    right: -1.5mm;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0066CC;
+    font-size: 10pt;
+    font-weight: 700;
+    z-index: 1;
+  }
+
+  .pipeline-step:last-child::after {
+    display: none;
+  }
+
+  .pipeline-icon {
+    font-size: 14pt;
+    margin-bottom: 1mm;
+  }
+
+  .pipeline-stage {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: #2C3E50 !important;
+    margin-bottom: 1mm;
+    line-height: 1.1;
+  }
+
+  .pipeline-tools {
+    font-size: 5.5pt;
+    color: #5A6C7D !important;
+    background: #F5F7FA;
+    padding: 1mm;
+    border-radius: 1mm;
+  }
+
+  /* ==================== CONCEPTS (Column 2) ==================== */
+  .concepts-grid-mini {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5mm;
+  }
+
+  .concept-mini {
+    background: linear-gradient(135deg, #F5F7FA 0%, white 100%);
+    border: 0.5pt solid #E1E8ED;
+    border-radius: 1mm;
+    padding: 0.5mm;
+  }
+
+  .concept-header-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.5mm;
+    margin-bottom: 0.5mm;
+  }
+
+  .concept-icon-mini {
+    font-size: 9pt;
+  }
+
+  .concept-title-mini {
+    font-size: 6pt;
+    font-weight: 700;
+    color: #2C3E50 !important;
+    line-height: 1.1;
+  }
+
+  .concept-keywords-mini {
+    font-size: 5pt;
+    color: #5A6C7D !important;
+    margin-bottom: 0.5mm;
+    line-height: 1.2;
+  }
+
+  .concept-benefit-mini {
+    font-size: 5pt;
+    font-weight: 600;
+    color: #00A3E0 !important;
+    background: #E3F2FD;
+    padding: 0.5mm;
+    border-radius: 0.75mm;
+    text-align: center;
+  }
+
+  /* ==================== STACK (Column 3) ==================== */
+  .stack-mini {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4mm;
+  }
+
+  .stack-item {
+    font-size: 5.5pt;
+    font-weight: 600;
+    color: #2C3E50 !important;
+    background: #F5F7FA;
+    padding: 0.6mm 0.4mm;
+    border-radius: 1mm;
+    text-align: center;
+    border: 0.5pt solid #E1E8ED;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 1.1;
+  }
+
+  /* ==================== MLFLOW (Column 3) ==================== */
+  .mlflow-highlight {
+    background: linear-gradient(135deg, #E3F2FD 0%, #B3E5FC 50%) !important;
+    border-radius: 1.5mm;
+    padding: 1mm !important;
+  }
+
+  .mlflow-highlight .section-heading {
+    color: #0066CC !important;
+    border-bottom-color: #0066CC;
+  }
+
+  .mlflow-mini {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6mm;
+  }
+
+  .mlflow-module-mini {
+    background: white;
+    padding: 0.6mm;
+    border-radius: 1mm;
+    border: 0.5pt solid #90CAF9;
+    overflow: hidden;
+  }
+
+  .mlflow-module-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6mm;
+    margin-bottom: 0.6mm;
+  }
+
+  .mlflow-module-icon {
+    font-size: 9pt;
+    flex-shrink: 0;
+  }
+
+  .mlflow-module-name {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: #0066CC !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mlflow-module-desc {
+    font-size: 5pt;
+    color: #5A6C7D !important;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* ==================== FOOTER (24mm) ==================== */
+  .footer-compact {
+    grid-row: 5;
+    height: 24mm;
+    background: linear-gradient(135deg, #1A1A2E 0%, #004080 100%) !important;
+    padding: 1.5mm 6mm !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden !important;
+  }
+
+  .references-section {
+    flex: 1;
+  }
+
+  .references-heading {
+    font-size: 9pt;
+    font-weight: 700;
+    color: white !important;
+    margin: 0 0 1mm 0;
+    border-bottom: 0.5pt solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.75mm;
+  }
+
+  .references-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1mm 2mm;
+  }
+
+  .reference-item {
+    font-size: 5.5pt;
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.3;
+    display: flex;
+    gap: 1mm;
+  }
+
+  .reference-number {
+    font-weight: 700;
+    color: #FFD23F !important;
+    flex-shrink: 0;
+  }
+
+  .reference-apa {
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  .credits {
+    border-top: 0.5pt solid rgba(255, 255, 255, 0.3);
+    padding-top: 1mm;
+  }
+
+  .credits-text {
+    font-size: 6pt;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0;
+    text-align: center;
+  }
+
+  .credits-text strong {
+    color: #FFD23F !important;
+    font-weight: 700;
+  }
+
+  /* ==================== Page Breaks ==================== */
+  .infographic-single-page,
+  .hero-banner,
+  .pipeline-row,
+  .roles-row,
+  .main-columns,
+  .footer-compact,
+  .column {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* ==================== Remove Hover Effects ==================== */
+  * {
+    box-shadow: none !important;
+  }
+
+  *:hover {
+    transform: none !important;
+  }
+
+  /* ==================== Ensure Quality ==================== */
+  ::selection {
+    background: transparent;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

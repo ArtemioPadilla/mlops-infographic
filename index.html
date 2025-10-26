@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infografía MLOps - Mejores Prácticas en Machine Learning">
+    <meta name="author" content="Artemio Padilla">
+    <title>MLOps: Mejores Prácticas - Infografía</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
+
+    <!-- Preload data -->
+    <link rel="preload" href="data/content.json" as="fetch" crossorigin>
+</head>
+<body>
+    <!-- Single Page Infographic - 3 Column Layout -->
+    <div class="infographic-single-page">
+
+        <!-- HERO BANNER -->
+        <header class="hero-banner" id="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">MLOps: Mejores Prácticas</h1>
+                <p class="hero-subtitle">Proyectos ML Reproducibles y Escalables</p>
+            </div>
+            <div class="hero-stat-main">
+                <span class="hero-number" data-counter="87">87</span>
+                <span class="hero-symbol">%</span>
+                <p class="hero-text">de proyectos ML nunca llegan a producción</p>
+            </div>
+        </header>
+
+        <!-- PIPELINE ROW - Full Width -->
+        <section class="pipeline-row">
+            <h2 class="section-heading pipeline-heading">Pipeline ML End-to-End</h2>
+            <div id="pipeline-container" class="pipeline-horizontal">
+                <!-- Pipeline will be populated -->
+            </div>
+        </section>
+
+        <!-- ROLES ROW - Full Width -->
+        <section class="roles-row">
+            <h2 class="section-heading roles-heading">Equipo MLOps</h2>
+            <div id="roles-container" class="roles-horizontal">
+                <!-- 5 roles will be populated -->
+            </div>
+        </section>
+
+        <!-- MAIN 3 COLUMNS GRID -->
+        <main class="main-columns">
+
+            <!-- COLUMN 1: Metrics -->
+            <div class="column column-1">
+
+                <!-- Metrics Section -->
+                <section class="section-compact">
+                    <h2 class="section-heading">¿Por qué MLOps?</h2>
+                    <div id="metrics-container" class="metrics-compact">
+                        <!-- Metrics will be populated -->
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMN 2: Concepts -->
+            <div class="column column-2">
+
+                <!-- Concepts Section -->
+                <section class="section-compact">
+                    <h2 class="section-heading">Conceptos Clave</h2>
+                    <div id="concepts-container" class="concepts-grid-mini">
+                        <!-- Concepts will be populated -->
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMN 3: Stack + MLFlow -->
+            <div class="column column-3">
+
+                <!-- Stack Section -->
+                <section class="section-compact">
+                    <h2 class="section-heading">Herramientas</h2>
+                    <div id="stack-container" class="stack-mini">
+                        <!-- Stack will be populated -->
+                    </div>
+                </section>
+
+                <!-- MLFlow Section -->
+                <section class="section-compact mlflow-highlight">
+                    <h2 class="section-heading">MLFlow</h2>
+                    <div id="mlflow-container" class="mlflow-mini">
+                        <!-- MLFlow modules will be populated -->
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER: Referencias + Credits -->
+        <footer class="footer-compact">
+            <div class="references-section">
+                <h3 class="references-heading">Referencias</h3>
+                <div id="references-container" class="references-grid">
+                    <!-- References will be populated -->
+                </div>
+            </div>
+            <div class="credits">
+                <p class="credits-text">
+                    <strong>Realizado por:</strong> <span id="footer-author"></span> •
+                    <span id="footer-note"></span> • <span id="footer-year"></span>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Cargando infografía...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script type="module" src="js/icons.js"></script>
+    <script type="module" src="js/counters.js"></script>
+    <script type="module" src="js/animations.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+    <noscript>
+        <div style="padding: 40px; text-align: center; background: #fff3cd; color: #856404; margin: 20px;">
+            <h2>JavaScript Requerido</h2>
+            <p>Esta infografía requiere JavaScript para cargar el contenido dinámicamente.</p>
+            <p>Por favor, habilita JavaScript en tu navegador.</p>
+        </div>
+    </noscript>
+</body>
+</html>

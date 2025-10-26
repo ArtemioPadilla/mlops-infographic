@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Output
+output/
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Temporary
+tmp/
+temp/
+.cache/
+
+# Environment
+.env
+.env.local
+.env.*.local
