@@ -8,7 +8,7 @@
   /* ==================== Page Setup ==================== */
   @page {
     size: A4 landscape;
-    margin: 10mm;
+    margin: 0mm;
   }
 
   /* ==================== General Reset ==================== */
@@ -41,22 +41,22 @@
 
   /* ==================== Container ==================== */
   .infographic-single-page {
-    width: 277mm;
-    height: 190mm;
+    width: 297mm;
+    height: 210mm;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: 32mm 24mm 7mm 72mm 24mm;
+    grid-template-rows: 34mm 28mm 20mm 98mm 30mm;
     gap: 0;
     overflow: hidden !important;
   }
 
-  /* ==================== HERO BANNER (32mm) ==================== */
+  /* ==================== HERO BANNER (34mm) ==================== */
   .hero-banner {
     grid-row: 1;
-    height: 32mm;
+    height: 34mm;
     background: linear-gradient(135deg, #0066CC 0%, #00A3E0 100%) !important;
-    padding: 3mm 6mm !important;
+    padding: 2.5mm 4mm !important;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -70,7 +70,7 @@
   }
 
   .hero-title {
-    font-size: 18pt;
+    font-size: 30pt;
     font-weight: 900;
     color: white !important;
     margin: 0 0 2mm 0;
@@ -78,7 +78,7 @@
   }
 
   .hero-subtitle {
-    font-size: 9pt;
+    font-size: 14pt;
     color: rgba(255, 255, 255, 0.95) !important;
     margin: 0;
   }
@@ -114,12 +114,12 @@
     line-height: 1.2;
   }
 
-  /* ==================== PIPELINE ROW (24mm) ==================== */
+  /* ==================== PIPELINE ROW (28mm) ==================== */
   .pipeline-row {
     grid-row: 2;
-    height: 24mm;
+    height: 28mm;
     background: white !important;
-    padding: 1.5mm 6mm;
+    padding: 1.5mm 4mm;
     border-bottom: 0.5mm solid #E1E8ED;
     overflow: hidden !important;
   }
@@ -134,12 +134,12 @@
     line-height: 1.1;
   }
 
-  /* ==================== ROLES ROW (7mm) ==================== */
+  /* ==================== ROLES ROW (20mm) ==================== */
   .roles-row {
     grid-row: 3;
-    height: 7mm;
+    height: 20mm;
     background: white !important;
-    padding: 0.75mm 6mm;
+    padding: 1mm 4mm;
     border-bottom: 0.5mm solid #E1E8ED;
     overflow: hidden !important;
   }
@@ -160,12 +160,12 @@
     gap: 1mm;
   }
 
-  /* ==================== MAIN COLUMNS (72mm) ==================== */
+  /* ==================== MAIN COLUMNS (101mm) ==================== */
   .main-columns {
     grid-row: 4;
-    height: 72mm;
+    height: 98mm;
     display: grid;
-    grid-template-columns: 92mm 92mm 92mm;
+    grid-template-columns: 97mm 97mm 97mm;
     gap: 0.5mm;
     padding: 0;
     background: #F5F7FA !important;
@@ -175,8 +175,8 @@
   .column {
     display: flex;
     flex-direction: column;
-    gap: 1.5mm;
-    padding: 1.5mm;
+    gap: 2mm;
+    padding: 3mm;
     background: white !important;
     overflow: hidden !important;
   }
@@ -192,16 +192,16 @@
 
   /* ==================== Section Compact ==================== */
   .section-compact {
-    margin-bottom: 0.75mm;
+    margin-bottom: 2mm;
     overflow: hidden !important;
     max-height: 100%;
   }
 
   .section-heading {
-    font-size: 8.5pt;
+    font-size: 9.5pt;
     font-weight: 700;
     color: #0066CC !important;
-    margin: 0 0 1.25mm 0;
+    margin: 0 0 2mm 0;
     padding-bottom: 0.75mm;
     border-bottom: 0.5pt solid #0066CC;
     line-height: 1.1;
@@ -211,13 +211,13 @@
   .metrics-compact {
     display: flex;
     flex-direction: column;
-    gap: 1mm;
+    gap: 2mm;
   }
 
   .metric-mini {
     background: linear-gradient(135deg, #F5F7FA 0%, white 100%);
     border-left: 2mm solid #0066CC;
-    padding: 0.75mm;
+    padding: 1.25mm;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 0.75mm;
@@ -225,7 +225,7 @@
   }
 
   .metric-icon-mini {
-    font-size: 16pt;
+    font-size: 18pt;
     line-height: 1;
   }
 
@@ -242,7 +242,7 @@
   }
 
   .metric-number-mini {
-    font-size: 16pt;
+    font-size: 18pt;
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
     color: #0066CC !important;
@@ -250,22 +250,22 @@
   }
 
   .metric-symbol-mini {
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: 700;
     color: #00A3E0 !important;
   }
 
   .metric-label-mini {
-    font-size: 8pt;
+    font-size: 9pt;
     font-weight: 600;
     color: #2C3E50 !important;
     margin-bottom: 0.5mm;
   }
 
   .metric-text-mini {
-    font-size: 6.5pt;
+    font-size: 7.5pt;
     color: #5A6C7D !important;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 
   /* ==================== ROLE COMPONENTS (Used in roles-horizontal) ==================== */
@@ -371,47 +371,47 @@
   .concepts-grid-mini {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.5mm;
+    gap: 2mm;
   }
 
   .concept-mini {
     background: linear-gradient(135deg, #F5F7FA 0%, white 100%);
     border: 0.5pt solid #E1E8ED;
     border-radius: 1mm;
-    padding: 0.5mm;
+    padding: 1.25mm;
   }
 
   .concept-header-mini {
     display: flex;
     align-items: center;
-    gap: 0.5mm;
-    margin-bottom: 0.5mm;
+    gap: 1mm;
+    margin-bottom: 1mm;
   }
 
   .concept-icon-mini {
-    font-size: 9pt;
+    font-size: 10pt;
   }
 
   .concept-title-mini {
-    font-size: 6pt;
+    font-size: 7pt;
     font-weight: 700;
     color: #2C3E50 !important;
     line-height: 1.1;
   }
 
   .concept-keywords-mini {
-    font-size: 5pt;
+    font-size: 6pt;
     color: #5A6C7D !important;
-    margin-bottom: 0.5mm;
-    line-height: 1.2;
+    margin-bottom: 1mm;
+    line-height: 1.35;
   }
 
   .concept-benefit-mini {
-    font-size: 5pt;
+    font-size: 6pt;
     font-weight: 600;
     color: #00A3E0 !important;
     background: #E3F2FD;
-    padding: 0.5mm;
+    padding: 1mm;
     border-radius: 0.75mm;
     text-align: center;
   }
@@ -420,15 +420,15 @@
   .stack-mini {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.4mm;
+    gap: 1mm;
   }
 
   .stack-item {
-    font-size: 5.5pt;
+    font-size: 6.5pt;
     font-weight: 600;
     color: #2C3E50 !important;
     background: #F5F7FA;
-    padding: 0.6mm 0.4mm;
+    padding: 1.25mm 1mm;
     border-radius: 1mm;
     text-align: center;
     border: 0.5pt solid #E1E8ED;
@@ -441,7 +441,7 @@
   .mlflow-highlight {
     background: linear-gradient(135deg, #E3F2FD 0%, #B3E5FC 50%) !important;
     border-radius: 1.5mm;
-    padding: 1mm !important;
+    padding: 1.5mm !important;
   }
 
   .mlflow-highlight .section-heading {
@@ -452,12 +452,12 @@
   .mlflow-mini {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.6mm;
+    gap: 1.5mm;
   }
 
   .mlflow-module-mini {
     background: white;
-    padding: 0.6mm;
+    padding: 1.25mm;
     border-radius: 1mm;
     border: 0.5pt solid #90CAF9;
     overflow: hidden;
@@ -466,17 +466,17 @@
   .mlflow-module-header {
     display: flex;
     align-items: center;
-    gap: 0.6mm;
-    margin-bottom: 0.6mm;
+    gap: 1mm;
+    margin-bottom: 1mm;
   }
 
   .mlflow-module-icon {
-    font-size: 9pt;
+    font-size: 10pt;
     flex-shrink: 0;
   }
 
   .mlflow-module-name {
-    font-size: 6.5pt;
+    font-size: 7.5pt;
     font-weight: 700;
     color: #0066CC !important;
     overflow: hidden;
@@ -485,20 +485,20 @@
   }
 
   .mlflow-module-desc {
-    font-size: 5pt;
+    font-size: 6pt;
     color: #5A6C7D !important;
-    line-height: 1.2;
+    line-height: 1.3;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  /* ==================== FOOTER (24mm) ==================== */
+  /* ==================== FOOTER (27mm) ==================== */
   .footer-compact {
     grid-row: 5;
-    height: 24mm;
+    height: 30mm;
     background: linear-gradient(135deg, #1A1A2E 0%, #004080 100%) !important;
-    padding: 1.5mm 6mm !important;
+    padding: 1.25mm 4mm !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -513,7 +513,7 @@
     font-size: 9pt;
     font-weight: 700;
     color: white !important;
-    margin: 0 0 1mm 0;
+    margin: 0 0 0.5mm 0;
     border-bottom: 0.5pt solid rgba(255, 255, 255, 0.3);
     padding-bottom: 0.75mm;
   }
@@ -521,7 +521,7 @@
   .references-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1mm 2mm;
+    gap: 1mm 2.5mm;
   }
 
   .reference-item {
@@ -529,7 +529,7 @@
     color: rgba(255, 255, 255, 0.9) !important;
     line-height: 1.3;
     display: flex;
-    gap: 1mm;
+    gap: 1.5mm;
   }
 
   .reference-number {
@@ -544,11 +544,11 @@
 
   .credits {
     border-top: 0.5pt solid rgba(255, 255, 255, 0.3);
-    padding-top: 1mm;
+    padding-top: 0.75mm;
   }
 
   .credits-text {
-    font-size: 6pt;
+    font-size: 5.5pt;
     color: rgba(255, 255, 255, 0.8) !important;
     margin: 0;
     text-align: center;
@@ -556,6 +556,13 @@
 
   .credits-text strong {
     color: #FFD23F !important;
+    font-weight: 700;
+  }
+
+  .author-link,
+  .online-link {
+    color: #FFD23F !important;
+    text-decoration: none;
     font-weight: 700;
   }
 
@@ -588,5 +595,22 @@
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  /* ==================== Force Visibility (Override GSAP Animations) ==================== */
+  /* Ensure all animated elements are visible in print, regardless of scroll position */
+  .metric-mini,
+  .role-mini,
+  .pipeline-step,
+  .concept-mini,
+  .stack-item,
+  .mlflow-module-mini,
+  .reference-item,
+  .hero-title,
+  .hero-subtitle,
+  .hero-stat-main {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
   }
 }

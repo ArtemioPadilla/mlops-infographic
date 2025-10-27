@@ -7,6 +7,11 @@
  * Initialize all animations
  */
 export function initAnimations() {
+  // Don't animate if in print mode
+  if (window.matchMedia('print').matches) {
+    return;
+  }
+
   // Register ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
 
@@ -97,3 +102,36 @@ export function addParallaxEffect() {
     });
   }
 }
+
+/**
+ * Handle print mode - disable animations and reset transforms
+ */
+window.addEventListener('beforeprint', () => {
+  // Kill all ScrollTrigger instances
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  }
+
+  // Clear all GSAP properties and reset elements to visible state
+  gsap.set('*', { clearProps: 'all' });
+
+  // Ensure all animated elements are visible
+  const animatedElements = [
+    '.metric-mini',
+    '.role-mini',
+    '.pipeline-step',
+    '.concept-mini',
+    '.stack-item',
+    '.mlflow-module-mini',
+    '.reference-item',
+    '.hero-title',
+    '.hero-subtitle',
+    '.hero-stat-main'
+  ].join(',');
+
+  gsap.set(animatedElements, {
+    opacity: 1,
+    transform: 'none',
+    visibility: 'visible'
+  });
+});

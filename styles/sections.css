@@ -244,6 +244,20 @@
   font-size: var(--text-sm);
 }
 
+.author-link,
+.online-link {
+  color: var(--accent-yellow);
+  text-decoration: none;
+  font-weight: var(--weight-bold);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.author-link:hover,
+.online-link:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
 /* ==================== Responsive ==================== */
 
 @media (max-width: 1200px) {
