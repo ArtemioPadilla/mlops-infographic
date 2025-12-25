@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infografía ML Testing & Deployment - Calidad, Confiabilidad y Gobernanza">
+    <meta name="author" content="Artemio Padilla">
+    <title>ML Testing & Deployment - Infografía</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/testing-theme.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
+    <link rel="stylesheet" href="styles/print-testing.css" media="print">
+
+    <!-- Preload data -->
+    <link rel="preload" href="data/content-testing.json" as="fetch" crossorigin>
+</head>
+<body data-content-path="data/content-testing.json">
+    <!-- Single Page Infographic - 3 Column Layout -->
+    <div class="infographic-single-page">
+
+        <!-- HERO BANNER -->
+        <header class="hero-banner" id="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">ML Testing & Deployment</h1>
+                <p class="hero-subtitle">Asegurando Calidad, Confiabilidad y Cumplimiento</p>
+            </div>
+            <div class="hero-stat-main">
+                <span class="hero-number" data-counter="60">60</span>
+                <span class="hero-symbol">%</span>
+                <p class="hero-text">de modelos ML fallan en producción por testing insuficiente</p>
+            </div>
+        </header>
+
+        <!-- TESTING PYRAMID ROW - Full Width -->
+        <section class="pipeline-row">
+            <h2 class="section-heading pipeline-heading">Testing Pyramid ML</h2>
+            <div id="pipeline-container" class="pipeline-horizontal">
+                <!-- Testing pyramid will be populated with testingPyramid data -->
+            </div>
+        </section>
+
+        <!-- DEPLOYMENT STRATEGIES ROW - Full Width -->
+        <section class="roles-row">
+            <h2 class="section-heading roles-heading">Estrategias de Despliegue</h2>
+            <div id="roles-container" class="roles-horizontal">
+                <!-- Deployment strategies will be populated -->
+            </div>
+        </section>
+
+        <!-- MAIN 3 COLUMNS GRID -->
+        <main class="main-columns">
+
+            <!-- COLUMN 1: Governance -->
+            <div class="column column-1">
+
+                <!-- Metrics Section (Why Testing?) -->
+                <section class="section-compact">
+                    <h2 class="section-heading">¿Por qué Testing?</h2>
+                    <div id="metrics-container" class="metrics-compact">
+                        <!-- Metrics will be populated -->
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMN 2: Testing Framework -->
+            <div class="column column-2">
+
+                <!-- Governance Section -->
+                <section class="section-compact">
+                    <h2 class="section-heading">Gobernanza</h2>
+                    <div id="concepts-container" class="concepts-grid-mini">
+                        <!-- Governance items will be populated -->
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMN 3: Architecture + Monitoring -->
+            <div class="column column-3">
+
+                <!-- Stack Section (Testing Tools) -->
+                <section class="section-compact">
+                    <h2 class="section-heading">Herramientas</h2>
+                    <div id="stack-container" class="stack-mini">
+                        <!-- Stack will be populated -->
+                    </div>
+                </section>
+
+                <!-- Monitoring Section (replaces MLFlow) -->
+                <section class="section-compact mlflow-highlight">
+                    <h2 class="section-heading">Monitoring</h2>
+                    <div id="mlflow-container" class="mlflow-mini">
+                        <!-- Monitoring tools will be populated -->
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER: Referencias + Credits -->
+        <footer class="footer-compact">
+            <div class="references-section">
+                <h3 class="references-heading">Referencias</h3>
+                <div id="references-container" class="references-grid">
+                    <!-- References will be populated -->
+                </div>
+            </div>
+            <div class="credits">
+                <p class="credits-text">
+                    <strong>Realizado por:</strong> <a href="https://www.artemiop.com" target="_blank" class="author-link"><span id="footer-author"></span></a> •
+                    <span id="footer-note"></span> •
+                    <a href="https://artemiopadilla.github.io/mlops-infographic/ml-testing-deployment.html" target="_blank" class="online-link">Ver online</a> •
+                    <a href="index.html" class="online-link">MLOps Infografía</a> •
+                    <span id="footer-year"></span>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Cargando infografía...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script type="module" src="js/icons.js"></script>
+    <script type="module" src="js/counters.js"></script>
+    <script type="module" src="js/animations.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+    <noscript>
+        <div style="padding: 40px; text-align: center; background: #fff3cd; color: #856404; margin: 20px;">
+            <h2>JavaScript Requerido</h2>
+            <p>Esta infografía requiere JavaScript para cargar el contenido dinámicamente.</p>
+            <p>Por favor, habilita JavaScript en tu navegador.</p>
+        </div>
+    </noscript>
+</body>
+</html>

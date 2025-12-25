@@ -1,0 +1,272 @@
+/**
+ * Print Overrides for ML Testing & Deployment Infographic
+ * Purple Theme for PDF Export
+ *
+ * This file overrides the default blue colors from print.css
+ * to match the purple theme for the Testing & Deployment infographic
+ */
+
+@media print {
+
+  /* ==================== PAGE MARGINS ==================== */
+  @page {
+    margin: 5mm;
+  }
+
+  /* ==================== HERO BANNER - PURPLE ==================== */
+  .hero-banner {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* ==================== SECTION HEADINGS - PURPLE ==================== */
+  .pipeline-heading,
+  .roles-heading {
+    color: #7C3AED !important;
+    border-bottom-color: #7C3AED !important;
+  }
+
+  .section-heading {
+    color: #8B5CF6 !important;
+    border-bottom-color: #8B5CF6 !important;
+  }
+
+  .mlflow-highlight .section-heading {
+    color: #7C3AED !important;
+    border-bottom-color: #7C3AED !important;
+  }
+
+  /* ==================== PIPELINE/PYRAMID ICONS - PURPLE ==================== */
+  .pipeline-icon {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .pipeline-step {
+    border-color: #E9D5FF !important;
+  }
+
+  .pipeline-step:hover {
+    border-color: #8B5CF6 !important;
+  }
+
+  /* ==================== ROLES ICONS - PURPLE ==================== */
+  .role-icon-mini {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .role-mini {
+    border-color: #E9D5FF !important;
+  }
+
+  /* ==================== METRICS - PURPLE ==================== */
+  .metric-mini {
+    border-left-color: #8B5CF6 !important;
+  }
+
+  .metric-number-mini,
+  .metric-symbol-mini {
+    color: #8B5CF6 !important;
+  }
+
+  /* ==================== CONCEPTS/GOVERNANCE - PURPLE ==================== */
+  .concept-mini {
+    background: linear-gradient(135deg, #FAF5FF 0%, white 100%) !important;
+    border-color: #E9D5FF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .concept-benefit-mini {
+    background: #EDE9FE !important;
+    color: #7C3AED !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ==================== STACK ITEMS - PURPLE ==================== */
+  .stack-item {
+    background: #F5F3FF !important;
+    border-color: #E9D5FF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ==================== MLFLOW/MONITORING HIGHLIGHT - PURPLE ==================== */
+  .mlflow-highlight {
+    background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 50%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .mlflow-module-mini {
+    border-color: #C084FC !important;
+  }
+
+  /* ==================== FOOTER - PURPLE ==================== */
+  .footer-compact {
+    background: linear-gradient(135deg, #3F3D56 0%, #7C3AED 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* ==================== LINKS IN FOOTER ==================== */
+  .author-link,
+  .online-link {
+    color: #FCD34D !important;
+  }
+
+  /* ==================== TESTING PYRAMID SHAPE - PRINT ==================== */
+
+  /* Container with better spacing */
+  body[data-content-path*="testing"] .pipeline-row {
+    padding-top: 3mm !important;
+    padding-bottom: 2mm !important;
+  }
+
+  /* Testing Pyramid - distinct graduated widths */
+  body[data-content-path*="testing"] .pipeline-horizontal {
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    gap: 4mm !important;
+    padding: 2mm 0 !important;
+  }
+
+  /* Base level - Widest (Código) - 90mm */
+  body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(1) {
+    flex: none !important;
+    width: 90mm !important;
+    max-width: 90mm !important;
+    min-width: 90mm !important;
+    background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%) !important;
+    border: 1pt solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: none !important;
+    padding: 4mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide level labels in print (take up too much space) */
+  body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step::before {
+    display: none !important;
+  }
+
+  /* Middle level (Datos) - 70mm */
+  body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(2) {
+    flex: none !important;
+    width: 70mm !important;
+    max-width: 70mm !important;
+    min-width: 70mm !important;
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+    border: 1pt solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: none !important;
+    padding: 4mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Top level - Narrowest (Modelos) - 50mm */
+  body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(3) {
+    flex: none !important;
+    width: 50mm !important;
+    max-width: 50mm !important;
+    min-width: 50mm !important;
+    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%) !important;
+    border: 1pt solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: none !important;
+    padding: 4mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Pyramid icons - optimized for print */
+  body[data-content-path*="testing"] .pipeline-icon {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 28px !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    margin-bottom: 2mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body[data-content-path*="testing"] .pipeline-stage {
+    font-size: 12pt !important;
+    font-weight: 800 !important;
+    color: white !important;
+    margin: 1mm 0 !important;
+  }
+
+  body[data-content-path*="testing"] .pipeline-tools {
+    background: transparent !important;  /* Remove white box */
+    padding: 0 !important;
+    border-radius: 0 !important;
+    font-size: 9pt !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.98) !important;
+    line-height: 1.4 !important;
+    margin-top: 1.5mm !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  /* Hide arrows in print - they distort layout */
+  body[data-content-path*="testing"] .pipeline-step::after {
+    display: none !important;
+  }
+
+  /* ==================== DEPLOYMENT CARDS - PRINT ==================== */
+
+  .role-mini {
+    min-height: 22mm !important;
+    padding: 3mm !important;
+    overflow: visible !important;
+  }
+
+  .role-tools-mini {
+    white-space: normal !important;
+    overflow: visible !important;
+    font-size: 7.5pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ==================== FOOTER - LIGHTER FOR BETTER READABILITY ==================== */
+
+  .footer-compact {
+    background: linear-gradient(135deg, #5A4A7C 0%, #8B5CF6 100%) !important;
+    padding: 1.5mm 4mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .references-heading {
+    font-size: 10pt !important;
+    margin-bottom: 1mm !important;
+  }
+
+  .reference-item {
+    font-size: 7pt !important;
+    line-height: 1.5 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .references-grid {
+    gap: 2.5mm 3mm !important;
+  }
+
+  /* ==================== ENSURE COLOR PRESERVATION ==================== */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}

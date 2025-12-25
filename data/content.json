@@ -1,5 +1,6 @@
 {
   "metadata": {
+    "schemaType": "mlops",
     "title": "MLOps: Mejores Prácticas",
     "subtitle": "Proyectos ML Reproducibles y Escalables",
     "author": "Artemio Padilla",

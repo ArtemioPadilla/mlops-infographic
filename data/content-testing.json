@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "schemaType": "testing",
+    "title": "ML Testing & Deployment",
+    "subtitle": "Asegurando Calidad, Confiabilidad y Cumplimiento",
+    "author": "Artemio Padilla",
+    "date": "2025",
+    "version": "1.0",
+    "mainStat": {
+      "number": "60",
+      "symbol": "%",
+      "text": "de modelos ML fallan en producción por testing insuficiente"
+    }
+  },
+
+  "testingPyramid": [
+    {
+      "id": 1,
+      "level": "Código",
+      "icon": "🔧",
+      "tools": "pytest, unittest",
+      "description": "Unit & Integration Tests",
+      "coverage": "80%+ cobertura"
+    },
+    {
+      "id": 2,
+      "level": "Datos",
+      "icon": "📊",
+      "tools": "Great Expectations",
+      "description": "Schema, Quality, Drift",
+      "coverage": "Validación continua"
+    },
+    {
+      "id": 3,
+      "level": "Modelos",
+      "icon": "🎯",
+      "tools": "MLflow, Evidently",
+      "description": "Performance, Bias, Robustness",
+      "coverage": "Métricas en producción"
+    }
+  ],
+
+  "deploymentStrategies": [
+    {
+      "id": 1,
+      "name": "Blue-Green",
+      "icon": "🔵🟢",
+      "description": "Dos entornos idénticos",
+      "benefit": "Zero downtime",
+      "useCase": "Rollback instantáneo"
+    },
+    {
+      "id": 2,
+      "name": "Canary",
+      "icon": "🐤",
+      "description": "Despliegue gradual",
+      "benefit": "Mitigación de riesgo",
+      "useCase": "Validación incremental"
+    },
+    {
+      "id": 3,
+      "name": "A/B Testing",
+      "icon": "🔬",
+      "description": "Comparación experimental",
+      "benefit": "Validación científica",
+      "useCase": "Mejora continua"
+    },
+    {
+      "id": 4,
+      "name": "Shadow",
+      "icon": "👥",
+      "description": "Testing en paralelo",
+      "benefit": "Sin impacto",
+      "useCase": "Validación segura"
+    },
+    {
+      "id": 5,
+      "name": "Rolling",
+      "icon": "🔄",
+      "description": "Actualización incremental",
+      "benefit": "Disponibilidad",
+      "useCase": "Despliegues continuos"
+    }
+  ],
+
+  "metrics": [
+    {
+      "icon": "✅",
+      "prefix": "",
+      "number": "99.9",
+      "symbol": "%",
+      "label": "Confiabilidad",
+      "text": "Uptime con testing automatizado"
+    },
+    {
+      "icon": "⚡",
+      "prefix": "-",
+      "number": "70",
+      "symbol": "%",
+      "label": "Reducción de Bugs",
+      "text": "Con testing comprehensivo"
+    },
+    {
+      "icon": "🔒",
+      "prefix": "",
+      "number": "100",
+      "symbol": "%",
+      "label": "Compliance",
+      "text": "Cumplimiento regulatorio automático"
+    }
+  ],
+
+  "governance": [
+    {
+      "id": 1,
+      "title": "Model Registry",
+      "icon": "📝",
+      "keywords": ["Versionamiento", "Metadata", "Lineage"],
+      "benefit": "Trazabilidad completa"
+    },
+    {
+      "id": 2,
+      "title": "Access Control",
+      "icon": "🔐",
+      "keywords": ["RBAC", "Permisos", "Autenticación"],
+      "benefit": "Seguridad robusta"
+    },
+    {
+      "id": 3,
+      "title": "Compliance",
+      "icon": "⚖️",
+      "keywords": ["GDPR", "Explainability", "Fairness"],
+      "benefit": "Cumplimiento regulatorio"
+    },
+    {
+      "id": 4,
+      "title": "Audit Trails",
+      "icon": "📋",
+      "keywords": ["Logs", "Tracking", "Reportes"],
+      "benefit": "Auditoría automática"
+    }
+  ],
+
+  "testingFramework": [
+    {
+      "id": 1,
+      "category": "Code Testing",
+      "icon": "🔧",
+      "tools": [
+        {"name": "pytest", "purpose": "Unit tests"},
+        {"name": "unittest", "purpose": "Testing framework"},
+        {"name": "coverage.py", "purpose": "Code coverage"},
+        {"name": "black", "purpose": "Code formatting"},
+        {"name": "pylint", "purpose": "Linting"},
+        {"name": "mypy", "purpose": "Type checking"}
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Data Testing",
+      "icon": "📊",
+      "tools": [
+        {"name": "Great Expectations", "purpose": "Data validation"},
+        {"name": "Evidently", "purpose": "Drift detection"},
+        {"name": "Pandera", "purpose": "Schema validation"},
+        {"name": "Cerberus", "purpose": "Data quality"},
+        {"name": "TensorFlow Data Validation", "purpose": "Statistics"},
+        {"name": "Deequ", "purpose": "Data quality (Spark)"}
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Model Testing",
+      "icon": "🎯",
+      "tools": [
+        {"name": "MLflow", "purpose": "Tracking & registry"},
+        {"name": "Evidently", "purpose": "Model monitoring"},
+        {"name": "Alibi", "purpose": "Explainability"},
+        {"name": "Fairlearn", "purpose": "Fairness testing"},
+        {"name": "DeepChecks", "purpose": "Model validation"},
+        {"name": "WhyLogs", "purpose": "Data logging"}
+      ]
+    }
+  ],
+
+  "architecture": [
+    {
+      "id": 1,
+      "pattern": "REST API",
+      "icon": "🌐",
+      "description": "FastAPI / Flask",
+      "useCase": "Low latency, sync",
+      "tools": ["FastAPI", "Flask", "Django REST"]
+    },
+    {
+      "id": 2,
+      "pattern": "Batch Processing",
+      "icon": "📦",
+      "description": "Airflow / Prefect",
+      "useCase": "High volume, scheduled",
+      "tools": ["Airflow", "Prefect", "Luigi"]
+    },
+    {
+      "id": 3,
+      "pattern": "Streaming",
+      "icon": "⚡",
+      "description": "Kafka / Kinesis",
+      "useCase": "Real-time, event-driven",
+      "tools": ["Kafka", "Kinesis", "Flink"]
+    },
+    {
+      "id": 4,
+      "pattern": "Edge Deployment",
+      "icon": "📱",
+      "description": "TensorFlow Lite / ONNX",
+      "useCase": "Mobile, IoT, low latency",
+      "tools": ["TF Lite", "ONNX", "CoreML"]
+    }
+  ],
+
+  "containerization": [
+    {
+      "id": 1,
+      "technology": "Docker",
+      "icon": "🐳",
+      "description": "Containerización de aplicaciones",
+      "benefits": ["Portabilidad", "Reproducibilidad", "Aislamiento"]
+    },
+    {
+      "id": 2,
+      "technology": "Docker Compose",
+      "icon": "📦",
+      "description": "Multi-container orchestration",
+      "benefits": ["Local dev", "Microservicios", "Configuración simple"]
+    },
+    {
+      "id": 3,
+      "technology": "Kubernetes",
+      "icon": "☸️",
+      "description": "Orquestación de containers",
+      "benefits": ["Auto-scaling", "Self-healing", "Load balancing"]
+    }
+  ],
+
+  "mlflowEquivalent": {
+    "title": "Monitoring & Observability",
+    "icon": "👁️",
+    "modules": [
+      {
+        "name": "Prometheus",
+        "icon": "🔥",
+        "desc": "Métricas de sistema"
+      },
+      {
+        "name": "Grafana",
+        "icon": "📊",
+        "desc": "Visualización de datos"
+      },
+      {
+        "name": "ELK Stack",
+        "icon": "🔍",
+        "desc": "Logs centralizados"
+      },
+      {
+        "name": "Datadog",
+        "icon": "📈",
+        "desc": "APM completo"
+      }
+    ]
+  },
+
+  "roles": [
+    {
+      "role": "QA Engineer",
+      "icon": "🧪",
+      "tools": ["pytest", "Selenium", "Great Expectations"]
+    },
+    {
+      "role": "DevOps Engineer",
+      "icon": "🔧",
+      "tools": ["Docker", "Kubernetes", "Terraform"]
+    },
+    {
+      "role": "ML Engineer",
+      "icon": "🤖",
+      "tools": ["Python", "MLflow", "FastAPI"]
+    },
+    {
+      "role": "Platform Engineer",
+      "icon": "☁️",
+      "tools": ["Kubernetes", "Istio", "ArgoCD"]
+    },
+    {
+      "role": "Security Engineer",
+      "icon": "🔒",
+      "tools": ["Trivy", "Vault", "RBAC"]
+    }
+  ],
+
+  "concepts": [
+    {
+      "title": "Testing de Código",
+      "icon": "🔧",
+      "keywords": ["Unit tests", "Integration", "Coverage"],
+      "benefit": "Alta calidad"
+    },
+    {
+      "title": "Testing de Datos",
+      "icon": "📊",
+      "keywords": ["Validación", "Quality checks", "Drift"],
+      "benefit": "Datos confiables"
+    },
+    {
+      "title": "Testing de Modelos",
+      "icon": "🎯",
+      "keywords": ["Métricas", "Bias", "Robustness"],
+      "benefit": "Modelos precisos"
+    },
+    {
+      "title": "CI/CD Pipelines",
+      "icon": "🔄",
+      "keywords": ["Automatización", "Testing", "Deployment"],
+      "benefit": "Entrega continua"
+    }
+  ],
+
+  "stack": [
+    {"name": "pytest"},
+    {"name": "Great Expectations"},
+    {"name": "Evidently"},
+    {"name": "MLflow"},
+    {"name": "Docker"},
+    {"name": "Kubernetes"},
+    {"name": "FastAPI"},
+    {"name": "Prometheus"},
+    {"name": "Grafana"}
+  ],
+
+  "references": [
+    {
+      "id": 1,
+      "apa": "Breck, E., Cai, S., Nielsen, E., et al. (2017). The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction. Proceedings of Machine Learning Research, 68."
+    },
+    {
+      "id": 2,
+      "apa": "Klaise, J., Van Looveren, A., Vacanti, G., & Coca, A. (2021). Monitoring and explainability of models in production. arXiv preprint arXiv:2007.06299."
+    },
+    {
+      "id": 3,
+      "apa": "Huyen, C. (2022). Designing Machine Learning Systems: An Iterative Process for Production-Ready Applications. O'Reilly Media."
+    },
+    {
+      "id": 4,
+      "apa": "Arrieta, A. B., Díaz-Rodríguez, N., Del Ser, J., et al. (2020). Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI. Information Fusion, 58, 82-115."
+    },
+    {
+      "id": 5,
+      "apa": "Microsoft. (2022). Responsible AI Standard, v2. https://www.microsoft.com/en-us/ai/responsible-ai"
+    },
+    {
+      "id": 6,
+      "apa": "Google. (2023). Rules of Machine Learning: Best Practices for ML Engineering. https://developers.google.com/machine-learning/guides/rules-of-ml"
+    }
+  ],
+
+  "footer": {
+    "author": "Artemio Padilla",
+    "note": "Creado con ayuda de inteligencia artificial",
+    "year": "2025",
+    "relatedLink": "Ver MLOps Infografía"
+  }
+}

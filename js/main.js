@@ -9,6 +9,93 @@ import { initCounters, animateHeroStat, animateMetricNumbers } from './counters.
 // Application state
 let contentData = null;
 
+// ============================================================
+// Schema Detection Helpers
+// ============================================================
+
+/**
+ * Get the schema type from content data
+ * @returns {'mlops'|'testing'|null}
+ */
+function getSchemaType() {
+  return contentData?.metadata?.schemaType || null;
+}
+
+/**
+ * Check if current content is testing variant
+ */
+function isTestingSchema() {
+  return getSchemaType() === 'testing';
+}
+
+// ============================================================
+// Data Normalizers
+// ============================================================
+
+/**
+ * Normalize roles/deploymentStrategies to common structure
+ * @returns {Array<{icon: string, title: string, subtitle: string}>|null}
+ */
+function normalizeRolesData() {
+  if (isTestingSchema() && contentData.deploymentStrategies) {
+    return contentData.deploymentStrategies.map(s => ({
+      icon: s.icon,
+      title: s.name,
+      subtitle: `${s.benefit} • ${s.useCase}`
+    }));
+  }
+  if (contentData.roles) {
+    return contentData.roles.map(r => ({
+      icon: r.icon,
+      title: r.role,
+      subtitle: Array.isArray(r.tools) ? r.tools.join(' • ') : String(r.tools || '')
+    }));
+  }
+  return null;
+}
+
+/**
+ * Normalize pipeline/testingPyramid to common structure
+ * @returns {Array<{icon: string, stage: string, tools: string}>|null}
+ */
+function normalizePipelineData() {
+  if (isTestingSchema() && contentData.testingPyramid) {
+    return contentData.testingPyramid.map(p => ({
+      icon: p.icon,
+      stage: p.level,
+      tools: String(p.tools || '')
+    }));
+  }
+  if (contentData.pipeline) {
+    return contentData.pipeline.map(p => ({
+      icon: p.icon,
+      stage: p.stage,
+      tools: Array.isArray(p.tools) ? p.tools.join(', ') : String(p.tools || '')
+    }));
+  }
+  return null;
+}
+
+/**
+ * Normalize concepts/governance to common structure
+ * @returns {Array<{icon: string, title: string, keywords: string[], benefit: string}>|null}
+ */
+function normalizeConceptsData() {
+  const data = isTestingSchema() ? contentData.governance : contentData.concepts;
+  if (!Array.isArray(data)) return null;
+  return data;
+}
+
+/**
+ * Normalize mlflow/mlflowEquivalent to common structure
+ * @returns {Array<{icon: string, name: string, desc: string}>|null}
+ */
+function normalizeMLFlowData() {
+  const data = isTestingSchema() ? contentData.mlflowEquivalent : contentData.mlflow;
+  if (!data || !Array.isArray(data.modules)) return null;
+  return data.modules;
+}
+
 /**
  * Initialize the application
  */
@@ -51,7 +138,9 @@ async function init() {
  */
 async function loadContent() {
   try {
-    const response = await fetch('data/content.json');
+    // Get content path from data attribute or use default
+    const contentPath = document.body.dataset.contentPath || 'data/content.json';
+    const response = await fetch(contentPath);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -86,19 +175,23 @@ function populateMetrics() {
 
 /**
  * Populate roles section
+ * Uses normalizer to handle both 'roles' (MLOps) and 'deploymentStrategies' (Testing)
  */
 function populateRoles() {
   const container = document.getElementById('roles-container');
-  if (!container || !contentData.roles) return;
+  if (!container) return;
 
-  container.innerHTML = contentData.roles.map(role => `
+  const data = normalizeRolesData();
+  if (!data) return;
+
+  container.innerHTML = data.map(item => `
     <div class="role-mini">
       <div class="role-icon-mini">
-        <span>${role.icon}</span>
+        <span>${item.icon}</span>
       </div>
       <div class="role-content-mini">
-        <h4>${role.role}</h4>
-        <div class="role-tools-mini">${role.tools.join(' • ')}</div>
+        <h4>${item.title}</h4>
+        <div class="role-tools-mini">${item.subtitle}</div>
       </div>
     </div>
   `).join('');
@@ -106,34 +199,42 @@ function populateRoles() {
 
 /**
  * Populate pipeline section
+ * Uses normalizer to handle both 'pipeline' (MLOps) and 'testingPyramid' (Testing)
  */
 function populatePipeline() {
   const container = document.getElementById('pipeline-container');
-  if (!container || !contentData.pipeline) return;
+  if (!container) return;
 
-  container.innerHTML = contentData.pipeline.map(step => `
+  const data = normalizePipelineData();
+  if (!data) return;
+
+  container.innerHTML = data.map(item => `
     <div class="pipeline-step">
-      <div class="pipeline-icon">${step.icon}</div>
-      <div class="pipeline-stage">${step.stage}</div>
-      <div class="pipeline-tools">${step.tools.join(', ')}</div>
+      <div class="pipeline-icon">${item.icon}</div>
+      <div class="pipeline-stage">${item.stage}</div>
+      <div class="pipeline-tools">${item.tools}</div>
     </div>
   `).join('');
 }
 
 /**
  * Populate concepts section
+ * Uses normalizer to handle both 'concepts' (MLOps) and 'governance' (Testing)
  */
 function populateConcepts() {
   const container = document.getElementById('concepts-container');
-  if (!container || !contentData.concepts) return;
+  if (!container) return;
 
-  container.innerHTML = contentData.concepts.map(concept => `
+  const data = normalizeConceptsData();
+  if (!data) return;
+
+  container.innerHTML = data.map(concept => `
     <div class="concept-mini">
       <div class="concept-header-mini">
         <span class="concept-icon-mini">${concept.icon}</span>
         <span class="concept-title-mini">${concept.title}</span>
       </div>
-      <div class="concept-keywords-mini">• ${concept.keywords.join(' • ')}</div>
+      <div class="concept-keywords-mini">• ${Array.isArray(concept.keywords) ? concept.keywords.join(' • ') : ''}</div>
       <div class="concept-benefit-mini">${concept.benefit}</div>
     </div>
   `).join('');
@@ -153,12 +254,16 @@ function populateStack() {
 
 /**
  * Populate MLFlow section
+ * Uses normalizer to handle both 'mlflow' (MLOps) and 'mlflowEquivalent' (Testing)
  */
 function populateMLFlow() {
   const container = document.getElementById('mlflow-container');
-  if (!container || !contentData.mlflow) return;
+  if (!container) return;
 
-  container.innerHTML = contentData.mlflow.modules.map(module => `
+  const modules = normalizeMLFlowData();
+  if (!modules) return;
+
+  container.innerHTML = modules.map(module => `
     <div class="mlflow-module-mini">
       <div class="mlflow-module-header">
         <span class="mlflow-module-icon">${module.icon}</span>

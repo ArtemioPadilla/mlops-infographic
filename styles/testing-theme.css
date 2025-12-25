@@ -1,0 +1,521 @@
+/**
+ * Testing & Deployment Theme - Purple Palette
+ * Override colors for ML Testing & Deployment infographic
+ */
+
+:root {
+  /* ==================== PRIMARY COLORS (Purple Theme) ==================== */
+  --color-primary: #8B5CF6;      /* Violet primary */
+  --color-secondary: #7C3AED;    /* Deep purple */
+  --color-accent: #C084FC;       /* Lavender accent */
+
+  /* ==================== BACKGROUNDS ==================== */
+  --color-bg-light: #F5F3FF;     /* Very light purple */
+  --color-bg-lighter: #FAF5FF;   /* Ultra light purple */
+  --color-bg-white: #FFFFFF;     /* White */
+  --color-bg-gradient: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+
+  /* ==================== TEXT COLORS ==================== */
+  --color-text-dark: #3F3D56;    /* Dark purple-grey */
+  --color-text-medium: #6B7280;  /* Medium grey */
+  --color-text-light: #9CA3AF;   /* Light grey */
+
+  /* ==================== BORDERS ==================== */
+  --color-border: #E9D5FF;       /* Light purple border */
+  --color-border-dark: #C084FC;  /* Purple border */
+
+  /* ==================== STATUS COLORS ==================== */
+  --color-success: #10B981;      /* Green (tests passed) */
+  --color-warning: #F59E0B;      /* Amber (warnings) */
+  --color-error: #EF4444;        /* Red (tests failed) */
+  --color-info: #06B6D4;         /* Cyan (info) */
+
+  /* ==================== ACCENT YELLOW (for highlights) ==================== */
+  --accent-yellow: #FCD34D;      /* Golden yellow */
+}
+
+/* ==================== HERO BANNER OVERRIDE ==================== */
+.hero-banner {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 50%, #6D28D9 100%) !important;
+}
+
+.hero-stat-main {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-number {
+  color: #FCD34D !important;
+}
+
+/* ==================== SECTION HEADINGS ==================== */
+.section-heading {
+  color: var(--color-primary) !important;
+  border-bottom-color: var(--color-primary) !important;
+}
+
+.pipeline-heading,
+.roles-heading {
+  color: var(--color-secondary) !important;
+}
+
+/* ==================== CARDS & COMPONENTS ==================== */
+.metric-mini {
+  border-left-color: var(--color-primary) !important;
+}
+
+.metric-number-mini,
+.metric-symbol-mini {
+  color: var(--color-primary) !important;
+}
+
+.concept-mini,
+.mlflow-module-mini {
+  background: linear-gradient(135deg, var(--color-bg-lighter) 0%, white 100%) !important;
+  border-color: var(--color-border) !important;
+}
+
+.concept-benefit-mini {
+  background: #EDE9FE !important;
+  color: var(--color-secondary) !important;
+}
+
+/* ==================== MLFLOW HIGHLIGHT (Now "Testing Highlight") ==================== */
+.mlflow-highlight {
+  background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 50%) !important;
+}
+
+.mlflow-highlight .section-heading {
+  color: var(--color-secondary) !important;
+  border-bottom-color: var(--color-secondary) !important;
+}
+
+.mlflow-module-mini {
+  border-color: var(--color-accent) !important;
+}
+
+/* ==================== PIPELINE STEPS ==================== */
+.pipeline-step {
+  background: linear-gradient(135deg, var(--color-bg-lighter) 0%, white 100%) !important;
+  border-color: var(--color-border) !important;
+}
+
+.pipeline-step:hover {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2) !important;
+}
+
+.pipeline-icon {
+  background: var(--color-bg-gradient) !important;
+}
+
+/* ==================== ROLES ==================== */
+.role-mini {
+  background: linear-gradient(135deg, var(--color-bg-lighter) 0%, white 100%) !important;
+  border-color: var(--color-border) !important;
+}
+
+.role-icon-mini {
+  background: var(--color-bg-gradient) !important;
+}
+
+/* ==================== STACK ITEMS ==================== */
+.stack-item {
+  background: var(--color-bg-light) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-dark) !important;
+}
+
+.stack-item:hover {
+  background: var(--color-accent) !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* ==================== FOOTER ==================== */
+.footer-compact {
+  background: linear-gradient(135deg, #3F3D56 0%, #7C3AED 100%) !important;
+}
+
+/* ==================== PRINT OVERRIDES ==================== */
+@media print {
+  .hero-banner {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .footer-compact {
+    background: linear-gradient(135deg, #3F3D56 0%, #7C3AED 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .metric-mini {
+    border-left-color: #8B5CF6 !important;
+  }
+
+  .pipeline-icon,
+  .role-icon-mini {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .mlflow-highlight {
+    background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 50%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* ==================== TESTING-SPECIFIC STYLES ==================== */
+
+/* Testing Pyramid Visual */
+.testing-pyramid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.pyramid-level {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pyramid-level-1 {
+  background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%);
+  width: 90%;
+}
+
+.pyramid-level-2 {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  width: 70%;
+}
+
+.pyramid-level-3 {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+  width: 50%;
+}
+
+/* Deployment Strategy Cards */
+.deployment-card {
+  background: white;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.deployment-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
+  transform: translateY(-4px);
+}
+
+.deployment-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Status Badges */
+.badge-passed {
+  background: var(--color-success);
+  color: white;
+}
+
+.badge-warning {
+  background: var(--color-warning);
+  color: white;
+}
+
+.badge-failed {
+  background: var(--color-error);
+  color: white;
+}
+
+/* Compliance Icons */
+.compliance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #EDE9FE;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+/* ==================== TESTING PYRAMID VISUAL SHAPE ==================== */
+
+/* Container styling with better spacing */
+body[data-content-path*="testing"] .pipeline-row {
+  padding-top: 2rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+body[data-content-path*="testing"] .pipeline-heading {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Make Testing Pyramid look like an actual pyramid with distinct widths */
+body[data-content-path*="testing"] .pipeline-horizontal {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  padding: 20px 0 !important;
+}
+
+/* Base level - Widest (Código) - FIXED WIDTH */
+body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(1) {
+  flex: none !important;  /* Disable flex growth */
+  width: 480px !important;
+  max-width: 480px !important;
+  min-width: 480px !important;
+  background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3) !important;
+  padding: 24px !important;
+}
+
+/* Add "Nivel 1" label */
+body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(1)::before {
+  content: "NIVEL 1 - BASE";
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+/* Middle level (Datos) - FIXED WIDTH */
+body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(2) {
+  flex: none !important;
+  width: 380px !important;
+  max-width: 380px !important;
+  min-width: 380px !important;
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3) !important;
+  padding: 24px !important;
+}
+
+/* Add "Nivel 2" label */
+body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(2)::before {
+  content: "NIVEL 2 - MEDIO";
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+/* Top level - Narrowest (Modelos) - FIXED WIDTH */
+body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(3) {
+  flex: none !important;
+  width: 280px !important;
+  max-width: 280px !important;
+  min-width: 280px !important;
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3) !important;
+  padding: 24px !important;
+}
+
+/* Add "Nivel 3" label */
+body[data-content-path*="testing"] .pipeline-horizontal .pipeline-step:nth-child(3)::before {
+  content: "NIVEL 3 - TOPE";
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+/* Hover effect for pyramid blocks */
+body[data-content-path*="testing"] .pipeline-step {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+body[data-content-path*="testing"] .pipeline-step:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 15px 35px rgba(109, 40, 217, 0.4) !important;
+}
+
+/* Larger icons for Testing Pyramid */
+body[data-content-path*="testing"] .pipeline-icon {
+  width: 70px !important;
+  height: 70px !important;
+  font-size: 40px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  margin-bottom: 12px !important;
+  border-radius: 50% !important;
+}
+
+body[data-content-path*="testing"] .pipeline-stage {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: white !important;
+  margin: 12px 0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+body[data-content-path*="testing"] .pipeline-tools {
+  background: transparent !important;  /* Remove white box */
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+  line-height: 1.4 !important;
+  margin-top: 8px !important;
+}
+
+/* Change arrows from blue to white/transparent */
+body[data-content-path*="testing"] .pipeline-step::after {
+  color: rgba(255, 255, 255, 0.4) !important;
+  background: transparent !important;
+}
+
+/* ==================== ENHANCED DEPLOYMENT CARDS ==================== */
+
+.role-mini {
+  position: relative;
+  overflow: visible !important; /* Allow text to wrap without cutting */
+  min-height: 95px !important;
+  padding: 14px !important;
+}
+
+.role-mini::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.role-mini:hover::before {
+  width: 6px;
+}
+
+/* Add arrow between deployment strategies */
+.role-mini:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  z-index: 10;
+}
+
+.role-content-mini h4 {
+  color: var(--color-secondary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.role-tools-mini {
+  font-size: 0.8rem !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  word-wrap: break-word !important;
+}
+
+/* ==================== METRIC BADGES - CIRCULAR DESIGN ==================== */
+
+.metric-icon-mini {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent)) !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.metric-mini:hover .metric-icon-mini {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* ==================== FIX BLUE LINKS IN GOVERNANCE ==================== */
+
+/* Ensure concept benefit links are purple, not blue */
+.concept-benefit-mini {
+  background: #EDE9FE !important;
+  color: #7C3AED !important;
+}
+
+.concept-benefit-mini a,
+.concept-keywords-mini a,
+.concept-mini a {
+  color: #8B5CF6 !important;
+  text-decoration: none !important;
+}
+
+.concept-benefit-mini a:hover {
+  color: #6D28D9 !important;
+  text-decoration: underline !important;
+}
+
+/* ==================== ENHANCED MONITORING SECTION ==================== */
+
+.mlflow-module-icon {
+  font-size: 30px !important;
+}
+
+.mlflow-module-mini {
+  padding: 14px !important;
+  min-height: 90px !important;
+  transition: all 0.3s ease;
+}
+
+.mlflow-module-mini:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+}
+
+.mlflow-module-name {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+
+.mlflow-module-desc {
+  font-size: 0.8rem !important;
+  line-height: 1.3 !important;
+}
